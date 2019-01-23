@@ -1,0 +1,29 @@
+<div class="dash-wrapper">
+	<div class="dash-icons">
+		<div ng-repeat="icon in icons" class="icons" ng-class="{'icons-first' : icon == icons[0]}" ng-click="click($event)">
+			<img src="{{icon.url}}">
+		</div>
+	</div>
+	<div class="dash-inbox">
+		<div class="inbox-header">
+			<span>Inbox</span>
+		</div>
+		<div class="inbox-messages">
+			<div ng-repeat="messages in inbox" class="messages" ng-class="{'message-special' : messages.special}">
+				<span>{{messages.type}}</span>
+				<span>{{messages.count}}</span>
+			</div>
+		</div>
+	</div>
+	<div class="dash-users">
+		<div class="users-header">
+			<input type="text" placeholder="Search">
+		</div>
+
+	</div>
+	<div class="dash-messages">
+	</div>
+	
+
+
+</div>

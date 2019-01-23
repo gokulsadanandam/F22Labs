@@ -3,4 +3,4 @@
 *
 * Description
 */
-angular.module('app', ['ngRoute','login'])
+angular.module('app', ['ngRoute','login','dash'])

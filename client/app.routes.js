@@ -5,8 +5,11 @@ angular.module('app')
             	templateUrl:'/client/components/login/login.html',
                 controller : 'login'                
             })
+            .when('/dash',{
+                templateUrl:'/client/components/dash/dash.html',
+                controller:'dash'
+            })
             .otherwise({
             	redirectTo:'/'
             });
-            $locationProvider.html5Mode(true);
     })
