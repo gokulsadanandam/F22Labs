@@ -91,7 +91,7 @@
 	height: 15%;
 	display: flex;
 	border-bottom: 1px solid #4e4242;
-	
+
 }
 
 .users-header > input{
@@ -111,9 +111,144 @@
     background-size: contain;
 }
 
-.dash-messages{
-	width: 40%;
-	height: 100%;
-	background-color: white
+.users-list{
+	height: 85%;
+	overflow: auto;
 }
 
+.users{
+	padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.users:hover{
+background:#303030;	
+}
+
+.users > .card-avatar{
+	margin:0px;
+	width: 20%;
+	height: 75px;
+	border-radius: 75px;
+	margin:auto;
+}
+
+.user-messages{
+	color: white;
+	width: 50%;
+	margin:auto;
+}
+
+.user-message{
+	font-size: smaller;
+}
+
+.user-activity{
+	text-align: center;
+	color: grey;
+	margin:auto;
+}
+
+.dash-messages{
+	width: 50%;
+	height: 100%;
+	background-color: white;
+	display: flex;
+}
+
+.dash-message-list{
+    height: 100%;
+    width: 65%;
+    background: #F1F1F1;
+    display: flex;
+    flex-flow: column;
+}
+
+
+.dash-message-header{
+	height: 15%;	
+	display: flex;
+	border-bottom: 1px solid #4e4242;
+}
+
+
+.active-user{
+	width: 50%;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.active-user-options{
+	width: 50%;
+	display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box{
+	width: 15%;
+    height: 35%;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 2px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.box > img{
+	width: 75%;
+	height: 75%
+}
+
+.dash-message-content{
+	height: 85%;
+}
+
+.reciever,.sender{
+	display: flex;
+    /*align-items: center;*/
+    padding: 5px;
+    /*justify-content: center;*/
+    flex-direction: column;
+}
+
+.sender{
+	align-items: flex-end;
+
+}
+
+.message-details{
+	display: flex;
+}
+
+.sender > .message-details {
+	flex-direction: row-reverse;
+}
+
+.sender > .message-details > .dash-user-message{
+	background: #3BC249
+}
+
+.message-details > .card-avatar,.message-details > .card-avatar{
+    width: 40px;
+    border-radius: 50px;
+    height: 40px;
+	margin:0px 
+}
+
+.dash-user-message{
+	box-shadow: 2px 2px 2px;
+    padding: 5px;
+    margin: auto 10px;
+}
+
+.dash-profile{
+    height: 100%;
+    width: 35%;
+}

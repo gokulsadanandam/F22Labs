@@ -1,29 +1,61 @@
 <div class="dash-wrapper">
-	<div class="dash-icons">
-		<div ng-repeat="icon in icons" class="icons" ng-class="{'icons-first' : icon == icons[0]}" ng-click="click($event)">
-			<img src="{{icon.url}}">
-		</div>
-	</div>
-	<div class="dash-inbox">
-		<div class="inbox-header">
-			<span>Inbox</span>
-		</div>
-		<div class="inbox-messages">
-			<div ng-repeat="messages in inbox" class="messages" ng-class="{'message-special' : messages.special}">
-				<span>{{messages.type}}</span>
-				<span>{{messages.count}}</span>
-			</div>
-		</div>
-	</div>
-	<div class="dash-users">
-		<div class="users-header">
-			<input type="text" placeholder="Search">
-		</div>
-
-	</div>
-	<div class="dash-messages">
-	</div>
-	
-
-
+    <div class="dash-icons">
+        <div ng-repeat="icon in icons" class="icons" ng-class="{'icons-first' : icon == icons[0]}" ng-click="click($event)">
+            <img src="{{icon.url}}">
+        </div>
+    </div>
+    <div class="dash-inbox">
+        <div class="inbox-header">
+            <span>Inbox</span>
+        </div>
+        <div class="inbox-messages">
+            <div ng-repeat="messages in inbox" class="messages" ng-class="{'message-special' : messages.special}">
+                <span>{{messages.type}}</span>
+                <span>{{messages.count}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="dash-users">
+        <div class="users-header">
+            <input type="text" placeholder="Search" ng-model="query">
+        </div>
+        <div class="users-list">
+            <div class="users" ng-repeat="user in users | filter:query">
+                <div class="card-avatar"></div>
+                <div class="user-messages">
+                    <div class="user-name">{{user.name}}</div>
+                    <div class="user-message">{{user.message}}</div>
+                </div>
+                <div class="user-activity">
+                    <div>...</div>
+                    <div>{{user.time}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dash-messages">
+        <div class="dash-message-list">
+            <div class="dash-message-header">
+                <div class="active-user">
+                    {{activeUser.name}}
+                </div>
+                <div class="active-user-options">
+                    <div class="box"><img src="/client/components/dash/star.svg"></div>
+                    <div class="box"><img src="/client/components/dash/star.svg"></div>
+                    <div class="box"><img src="/client/components/dash/star.svg"></div>
+                </div>
+            </div>
+            <div class="dash-message-content">
+                <div class="dash-user-messages" ng-repeat="messages in activeUser.messageList" ng-class="{'reciever' : !messages.sender , 'sender' : messages.sender }">
+                    <div class="message-details">
+                        <div class="card-avatar"></div>
+                        <div class="dash-user-message">{{messages.message}}</div>
+                    </div>
+                    {{messages.time}}
+                </div>
+            </div>
+        </div>
+        <div class="dash-profile">
+        </div>
+    </div>
 </div>
