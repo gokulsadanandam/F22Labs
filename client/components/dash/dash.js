@@ -7,7 +7,7 @@ angular.module('dash', [])
     .controller('dash', ['$scope', function($scope) {
 
         $scope.icons = [{
-                'url': '/client/components/dash/whatsapp-logo.svg',
+                'url': '/client/components/dash/menu.svg',
                 'action': ''
             },
             {
@@ -15,19 +15,19 @@ angular.module('dash', [])
                 'action': ''
             },
             {
-                'url': '/client/components/dash/whatsapp-logo.svg',
+                'url': '/client/components/dash/gmail.svg',
                 'action': ''
             },
             {
-                'url': '/client/components/dash/whatsapp-logo.svg',
+                'url': '/client/components/dash/skype.svg',
                 'action': ''
             },
             {
-                'url': '/client/components/dash/whatsapp-logo.svg',
+                'url': '/client/components/dash/slack.svg',
                 'action': ''
             },
             {
-                'url': '/client/components/dash/whatsapp-logo.svg',
+                'url': '/client/components/dash/add.svg',
                 'action': ''
             }
         ]
@@ -77,8 +77,14 @@ angular.module('dash', [])
 
         $scope.users = [{
             'name': 'Michelle',
-            'message': 'Can you send me the Address',
+            'message': 'How about you?',
             'time': '2 mins ago',
+            'nickName':'Micky',
+            'contact':'8878789898',
+            'bday':'22nd Nov 1995',
+            'gender':'Male',
+            'language':'German',
+            'url':'/client/components/dash/user1.jpeg',
             'messageList': [{
                 'message': 'How are You?',
                 'sender': false,
@@ -93,26 +99,42 @@ angular.module('dash', [])
                 'time': '13:32'
             }]
         }, {
-            'name': 'Tesla',
-            'message': 'Can you send me the link',
+            'name': 'Nikol Tesla',
+            'message': 'How about this Sunday?',
             'time': '20 mins ago',
+            'nickName':'Micky',
+            'contact':'8878789898',
+            'bday':'22nd Nov 1995',
+            'gender':'Male',
+            'language':'French',
+            'url':'/client/components/dash/user2.jpeg',
             'messageList': [{
-                'message': 'How are You?',
+                'message': 'Can we Meet this Week?',
                 'sender': false,
                 'time': '13:30'
             }, {
-                'message': 'I am Fine',
+                'message': "Yes! I know it's been a long time",
                 'sender': true,
                 'time': '13:31'
             }, {
-                'message': 'How about you?',
-                'sender': true,
+                'message': 'How about this Sunday?',
+                'sender': false,
                 'time': '13:32'
+            }, {
+                'message': 'Yes! I love to meet this Sunday!',
+                'sender': true,
+                'time': '13:34'
             }]
         }, {
-            'name': 'Jax',
-            'message': 'How are you?',
+            'name': 'Jax Paxter',
+            'message': 'How about you?',
             'time': '11 mins ago',
+            'nickName':'Jaxxy',
+            'contact':'88784539898',
+            'bday':'22nd Nov 1999',
+            'gender':'Male',
+            'language':'English',
+            'url':'/client/components/dash/user3.jpeg',
             'messageList': [{
                 'message': 'How are You?',
                 'sender': false,
@@ -132,6 +154,13 @@ angular.module('dash', [])
             'name': 'Michelle',
             'message': 'Can you send me the Address',
             'time': '2 mins ago',
+            'nickName':'Micky',
+            'contact':'8878789898',
+            'bday':'22nd Nov 1995',
+            'gender':'Male',
+            'language':'German',
+            'url':'/client/components/dash/user1.jpeg',
+
             'messageList': [{
                 'message': 'How are You?',
                 'sender': false,
@@ -147,7 +176,7 @@ angular.module('dash', [])
             }]
         }
 
-        $scope.click = function(data) {
-            console.log(data)
+        $scope.changeUser = function(data) {
+            $scope.activeUser = data
         }
     }])

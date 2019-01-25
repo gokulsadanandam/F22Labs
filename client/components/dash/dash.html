@@ -20,7 +20,7 @@
             <input type="text" placeholder="Search" ng-model="query">
         </div>
         <div class="users-list">
-            <div class="users" ng-repeat="user in users | filter:query">
+            <div class="users" ng-repeat="user in users | filter:query" ng-click="changeUser(this.user)">
                 <div class="card-avatar"></div>
                 <div class="user-messages">
                     <div class="user-name">{{user.name}}</div>
@@ -41,8 +41,8 @@
                 </div>
                 <div class="active-user-options">
                     <div class="box"><img src="/client/components/dash/star.svg"></div>
-                    <div class="box"><img src="/client/components/dash/star.svg"></div>
-                    <div class="box"><img src="/client/components/dash/star.svg"></div>
+                    <div class="box"><img src="/client/components/dash/phone-call.svg"></div>
+                    <div class="box"><img src="/client/components/dash/video-camera.svg"></div>
                 </div>
             </div>
             <div class="dash-message-content">
@@ -51,11 +51,41 @@
                         <div class="card-avatar"></div>
                         <div class="dash-user-message">{{messages.message}}</div>
                     </div>
-                    {{messages.time}}
+                    <div>
+                        {{messages.time}}
+                    </div>
                 </div>
             </div>
         </div>
         <div class="dash-profile">
+            <div class="dash-profile-header">
+                <span>{{activeUser.name | uppercase}}</span>
+            </div>
+            <div class="dash-profile-body">
+                <div class="dash-profile-picture">
+                    <img src="{{activeUser.url}}">
+                </div>
+                <div class="dash-profile-details">
+                    <span>NickName:</span>
+                    <span>{{activeUser.nickName}}</span>
+                </div>
+                <div class="dash-profile-details">
+                    <span>Contact:</span>
+                    <span>{{activeUser.contact}}</span>
+                </div>
+                <div class="dash-profile-details">
+                    <span>Gender:</span>
+                    <span>{{activeUser.gender}}</span>
+                </div>
+                <div class="dash-profile-details">
+                    <span>Language:</span>
+                    <span>{{activeUser.language}}</span>
+                </div>
+                <div class="dash-profile-details">
+                    <span>DOB:</span>
+                    <span>{{activeUser.bday}}</span>
+                </div>
+            </div>
         </div>
     </div>
 </div>

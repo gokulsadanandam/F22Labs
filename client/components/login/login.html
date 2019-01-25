@@ -3,13 +3,13 @@
 			<div class="card-header">
 				<div class="card-avatar"></div>
 				<div class="card-heading">Admin Login</div>
-			<!-- <form name="form" class="card-form" ng-submit="submit(form.$valid)"> -->
-			<form name="form" class="card-form" ng-submit="submit()">
+			<form name="form" class="card-form" ng-submit="submit(form.$valid)">
+			<!-- <form name="form" class="card-form" ng-submit="submit()"> -->
 				<div class="card-form-input">
 					<!-- <input type="email" placeholder="yourname@email.com" required /> -->
 					<input type="email" placeholder="yourname@email.com" />
 					<input type="password" placeholder="password"  />
-					<!-- <input type="password" placeholder="password" required /> -->
+					<!-- <input type="password" placeholder="password" minlength="8" name="password" required pattern="^\w+\d+$|^\d+\w+$|^\w+\d+\w+$" /> -->
 				</div>
 				<div class="card-form-submit">
 					<div class="checkbox">
@@ -24,8 +24,8 @@
 		<div class="card-social">
 			<div class="footer">
 				<div class="footer-note">Connect With</div>
-				<img src="/client/components/login/facebook-brands.svg">
-				<img src="/client/components/login/twitter-brands.svg">
+				<img src="/client/components/login/assets/facebook-brands.svg">
+				<img src="/client/components/login/assets/twitter-brands.svg">
 			</div>
 		</div>
 	</div>

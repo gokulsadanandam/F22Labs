@@ -3,11 +3,11 @@
 *
 * Description
 */
-angular.module('login', [])
+angular.module('login', ['ngMessages'])
 	.controller('login', ['$scope', function($scope){
 		
 		$scope.submit = function(valid){
-			if(!valid){
+			if(valid){
 				window.location.assign("/#!/dash")
 			}
 		}
