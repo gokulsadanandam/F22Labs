@@ -294,3 +294,53 @@ background:#303030;
 .dash-profile-details > span:nth-child(2){
 	font-weight: bold
 }
+
+
+@media screen and (max-width:600px)  {
+	.dash-icons{
+		width: 20%;
+	}	
+
+	.dash-inbox,.dash-users,.dash-messages,.dash-profile{
+		display: none
+	}
+
+	#active{
+		display: block;
+		width: 80%;
+	}
+	 #active > .dash-message-list{
+		width: 100%;
+	} 
+
+	#active > .users-list > .users > .card-avatar{
+		width: 15%;
+		height: 50px;
+	}
+
+}/* 
+
+@media screen and (min-width:600px) and (max-width: 992px)  {
+	.dash-icons{
+		width: 10%;
+	}	
+
+	.dash-users,.dash-inbox,.dash-messages,.dash-profile{
+		display: none
+	}
+
+	#active{
+		display: block;
+		width: 80%;
+	}
+
+	 #active > .dash-message-list{
+		width: 100%;
+	} 
+
+	#active > .users-list > .users > .card-avatar{
+		width: 15%;
+		height: 50px;
+	}
+
+} */

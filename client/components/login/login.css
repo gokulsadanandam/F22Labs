@@ -45,6 +45,7 @@
     background-size: cover;
     height: 120px;
     margin: auto;
+    background-position: center
 }
 
 /* Styles for Card Heading*/
@@ -184,8 +185,8 @@
 
 }
 
-@media only screen and (min-width: 768px) and (max-width:992px) {
-
+@media only screen and (min-width: 600px) and (max-width:992px) {
+  
   .card{
     min-width: 250px;
   }
@@ -220,14 +221,11 @@
     width: 20px;
   }    
 
+}
 
-
-} 
-
-@media only screen and (max-height: 992px) and (orientation:portrait)
+@media only screen and (min-height: 768px)  and (orientation:portrait)
 {
 .card{
-    height: 40%
+    height: 45%
 }
 }
-

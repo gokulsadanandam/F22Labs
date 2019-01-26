@@ -5,7 +5,7 @@
  */
 angular.module('dash', [])
     .controller('dash', ['$scope', function($scope) {
-
+        $scope.active = "dash-messages-active"
         $scope.icons = [{
                 'url': '/client/components/dash/menu.svg',
                 'action': ''
@@ -176,7 +176,19 @@ angular.module('dash', [])
             }]
         }
 
+        $scope.clickIcon = function(){
+            document.getElementById('active').removeAttribute("id")
+            document.getElementsByClassName('dash-inbox')[0].setAttribute("id","active")
+        }
+
+        $scope.clickInbox = function(){
+        document.getElementById('active').removeAttribute("id")            
+        document.getElementsByClassName('dash-users')[0].setAttribute("id","active")
+        }
+
         $scope.changeUser = function(data) {
             $scope.activeUser = data
+            document.getElementById('active').removeAttribute("id")            
+            document.getElementsByClassName('dash-messages')[0].setAttribute("id","active")
         }
     }])
