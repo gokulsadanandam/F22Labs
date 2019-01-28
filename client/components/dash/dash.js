@@ -7,30 +7,18 @@ angular.module('dash', [])
     .controller('dash', ['$scope', function($scope) {
         $scope.active = "dash-messages-active"
         $scope.icons = [{
-                'url': '/client/components/dash/menu.svg',
-                'action': ''
-            },
-            {
-                'url': '/client/components/dash/whatsapp-logo.svg',
-                'action': ''
-            },
-            {
-                'url': '/client/components/dash/gmail.svg',
-                'action': ''
-            },
-            {
-                'url': '/client/components/dash/skype.svg',
-                'action': ''
-            },
-            {
-                'url': '/client/components/dash/slack.svg',
-                'action': ''
-            },
-            {
-                'url': '/client/components/dash/add.svg',
-                'action': ''
-            }
-        ]
+            'url': '/client/components/dash/assets/menu.svg',
+        }, {
+            'url': '/client/components/dash/assets/whatsapp-logo.svg',
+        }, {
+            'url': '/client/components/dash/assets/gmail.svg',
+        }, {
+            'url': '/client/components/dash/assets/skype.svg',
+        }, {
+            'url': '/client/components/dash/assets/slack.svg',
+        }, {
+            'url': '/client/components/dash/assets/add.svg',
+        }]
 
         $scope.inbox = [{
             'type': 'All',
@@ -79,12 +67,12 @@ angular.module('dash', [])
             'name': 'Michelle',
             'message': 'How about you?',
             'time': '2 mins ago',
-            'nickName':'Micky',
-            'contact':'8878789898',
-            'bday':'22nd Nov 1995',
-            'gender':'Male',
-            'language':'German',
-            'url':'/client/components/dash/user1.jpeg',
+            'nickName': 'Micky',
+            'contact': '8878789898',
+            'bday': '22nd Nov 1995',
+            'gender': 'Male',
+            'language': 'German',
+            'url': '/client/components/dash/assets/user1.jpeg',
             'messageList': [{
                 'message': 'How are You?',
                 'sender': false,
@@ -102,12 +90,12 @@ angular.module('dash', [])
             'name': 'Nikol Tesla',
             'message': 'How about this Sunday?',
             'time': '20 mins ago',
-            'nickName':'Micky',
-            'contact':'8878789898',
-            'bday':'22nd Nov 1995',
-            'gender':'Male',
-            'language':'French',
-            'url':'/client/components/dash/user2.jpeg',
+            'nickName': 'Micky',
+            'contact': '8878789898',
+            'bday': '22nd Nov 1995',
+            'gender': 'Male',
+            'language': 'French',
+            'url': '/client/components/dash/assets/user2.jpeg',
             'messageList': [{
                 'message': 'Can we Meet this Week?',
                 'sender': false,
@@ -129,12 +117,12 @@ angular.module('dash', [])
             'name': 'Jax Paxter',
             'message': 'How about you?',
             'time': '11 mins ago',
-            'nickName':'Jaxxy',
-            'contact':'88784539898',
-            'bday':'22nd Nov 1999',
-            'gender':'Male',
-            'language':'English',
-            'url':'/client/components/dash/user3.jpeg',
+            'nickName': 'Jaxxy',
+            'contact': '88784539898',
+            'bday': '22nd Nov 1999',
+            'gender': 'Male',
+            'language': 'English',
+            'url': '/client/components/dash/assets/user3.jpeg',
             'messageList': [{
                 'message': 'How are You?',
                 'sender': false,
@@ -154,12 +142,12 @@ angular.module('dash', [])
             'name': 'Michelle',
             'message': 'Can you send me the Address',
             'time': '2 mins ago',
-            'nickName':'Micky',
-            'contact':'8878789898',
-            'bday':'22nd Nov 1995',
-            'gender':'Male',
-            'language':'German',
-            'url':'/client/components/dash/user1.jpeg',
+            'nickName': 'Micky',
+            'contact': '8878789898',
+            'bday': '22nd Nov 1995',
+            'gender': 'Male',
+            'language': 'German',
+            'url': '/client/components/dash/assets/user1.jpeg',
 
             'messageList': [{
                 'message': 'How are You?',
@@ -176,19 +164,19 @@ angular.module('dash', [])
             }]
         }
 
-        $scope.clickIcon = function(){
+        $scope.clickIcon = function() {
             document.getElementById('active').removeAttribute("id")
-            document.getElementsByClassName('dash-inbox')[0].setAttribute("id","active")
+            document.getElementsByClassName('dash-inbox')[0].setAttribute("id", "active")
         }
 
-        $scope.clickInbox = function(){
-        document.getElementById('active').removeAttribute("id")            
-        document.getElementsByClassName('dash-users')[0].setAttribute("id","active")
+        $scope.clickInbox = function() {
+            document.getElementById('active').removeAttribute("id")
+            document.getElementsByClassName('dash-users')[0].setAttribute("id", "active")
         }
 
         $scope.changeUser = function(data) {
             $scope.activeUser = data
-            document.getElementById('active').removeAttribute("id")            
-            document.getElementsByClassName('dash-messages')[0].setAttribute("id","active")
+            document.getElementById('active').removeAttribute("id")
+            document.getElementsByClassName('dash-messages')[0].setAttribute("id", "active")
         }
     }])

@@ -1,10 +1,12 @@
 <div class="dash-wrapper">
+
     <div class="dash-icons">
         <div ng-repeat="icon in icons" class="icons" ng-class="{'icons-first' : icon == icons[0]}" ng-click="clickIcon()">
             <img src="{{icon.url}}">
         </div>
     </div>
-    <div class="dash-inbox" >
+
+    <div class="dash-inbox">
         <div class="inbox-header">
             <span>Inbox</span>
         </div>
@@ -15,6 +17,7 @@
             </div>
         </div>
     </div>
+
     <div class="dash-users">
         <div class="users-header">
             <input type="text" placeholder="Search" ng-model="query">
@@ -33,6 +36,7 @@
             </div>
         </div>
     </div>
+
     <div class="dash-messages" id="active">
         <div class="dash-message-list">
             <div class="dash-message-header">
@@ -40,9 +44,9 @@
                     {{activeUser.name}}
                 </div>
                 <div class="active-user-options">
-                    <div class="box"><img src="/client/components/dash/star.svg"></div>
-                    <div class="box"><img src="/client/components/dash/phone-call.svg"></div>
-                    <div class="box"><img src="/client/components/dash/video-camera.svg"></div>
+                    <div class="box"><img src="/client/components/dash/assets/star.svg"></div>
+                    <div class="box"><img src="/client/components/dash/assets/phone-call.svg"></div>
+                    <div class="box"><img src="/client/components/dash/assets/video-camera.svg"></div>
                 </div>
             </div>
             <div class="dash-message-content">
@@ -56,7 +60,21 @@
                     </div>
                 </div>
             </div>
+            <div class="dash-message-bar">
+                <div class="box">
+                    <img src="/client/components/dash/assets/attachment.svg"/>
+                </div>
+                <div class="message-bar">
+                    <input type="text" placeholder="Type Your Message">
+                </div>
+                <div class="box">
+                    <img src="/client/components/dash/assets/happiness.svg"/>
+                </div>
+                <div class="message-send-button"></div>
+
+            </div>
         </div>
+
         <div class="dash-profile">
             <div class="dash-profile-header">
                 <span>{{activeUser.name | uppercase}}</span>
@@ -88,4 +106,5 @@
             </div>
         </div>
     </div>
+
 </div>
